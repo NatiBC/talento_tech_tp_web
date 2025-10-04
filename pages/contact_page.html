@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página de inicio — Basica</title>
+  <meta name="description" content="Página de inicio sencilla creada como ejemplo.">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container" style="display:flex;align-items:center;gap:16px">
+      <div class="takai">Takai Ilustraciones</div>
+      <nav class="nav-right">
+        <div class="dropdown">
+          <div class="dropdown-toggle">☰</div>
+          <div class="dropdown-menu">
+            <a href="../index.html">Inicio</a>
+            <a href="info_page.html">Información Personal</a>
+            <a href="gallery_page.html">Galeria</a>
+            <a href="contact_page.html">COMMISSIONS</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="contact" style="margin-top:18px">
+      <div class="card">
+        <h3>COMMISSIONS solicitud</h3>
+        <form style="margin-top:10px;display:grid;gap:8px">
+          <input type="text" placeholder="Tu nombre" required style="padding:8px;border-radius:6px;border:1px solid #ddd">
+          <input type="email" placeholder="Correo" required style="padding:8px;border-radius:6px;border:1px solid #ddd">
+          <textarea placeholder="Descripción del trabajo" rows="4" style="padding:8px;border-radius:6px;border:1px solid #ddd"></textarea>
+          <button type="submit" class="button_primary" style="border:none;cursor:pointer">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© " + new Date().getFullYear() + " Takai Ilustraciones. Todos los derechos reservados.</small>
+      <a href="https://linktr.ee/takaiart?fbclid=PAZXh0bgNhZW0CMTEAAacJqnladyUCD1JJzYK1yMUQOdNXPHyoNfoDXtG9DmD4tYWZpp0InkaV9zLMrg_aem_D8L1O1GoydKBXslQHu5Dzw">
+        <img src="../media/img/linktree.png" alt="logo de linktree" width="30px" height="30px">
+      </a>    
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      try{
+        const footer = document.querySelector('footer small');
+        if(footer) footer.innerHTML = '© ' + new Date().getFullYear() + ' Takai Ilustraciones. Todos los derechos reservados.';
+      }catch(e){}
+
+      const dropdown = document.querySelector('.dropdown');
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      toggle.addEventListener('click', ()=>{
+        dropdown.classList.toggle('open');
+      });
+
+      document.addEventListener('click', (e)=>{
+        if(!dropdown.contains(e.target)){
+          dropdown.classList.remove('open');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

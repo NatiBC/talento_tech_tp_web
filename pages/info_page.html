@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página de inicio — Basica</title>
+  <meta name="description" content="Página de inicio sencilla creada como ejemplo.">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container" style="display:flex;align-items:center;gap:16px">
+      <div class="takai">Takai Ilustraciones</div>
+      <nav class="nav-right">
+        <div class="dropdown">
+          <div class="dropdown-toggle">☰</div>
+          <div class="dropdown-menu">
+            <a href="../index.html">Inicio</a>
+            <a href="info_page.html">Información Personal</a>
+            <a href="gallery_page.html">Galeria</a>
+            <a href="contact_page.html">COMMISSIONS</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <div>
+        <h1>Información del artista</h1>
+    </section>
+
+    <section id="about" style="margin-top:20px">
+      <div class="card">
+        <p style="margin-top:8px">Hola, soy Takai (Carolina C.), ilustradora digital apasionada por transformar ideas en imágenes llenas de color, emoción y personalidad.
+            Me especializo en ilustración de personajes, arte conceptual, diseño editorial y más, trabajando con herramientas digitales que me permiten dar vida a cada detalle.
+            Mi objetivo es crear ilustraciones que no solo sean visualmente atractivas, sino que también conecten con las personas y cuenten una historia. A lo largo de mi experiencia, 
+            he participado en proyectos de libros, branding y videojuegos, siempre adaptando mi estilo a las necesidades de cada cliente.
+            Si buscás una ilustración única, creativa y hecha con dedicación, ¡me encantaría colaborar con vos!</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© " + new Date().getFullYear() + " Takai Ilustraciones. Todos los derechos reservados.</small>
+      <a href="https://linktr.ee/takaiart?fbclid=PAZXh0bgNhZW0CMTEAAacJqnladyUCD1JJzYK1yMUQOdNXPHyoNfoDXtG9DmD4tYWZpp0InkaV9zLMrg_aem_D8L1O1GoydKBXslQHu5Dzw">
+        <img src="../media/img/linktree.png" alt="logo de linktree" width="30px" height="30px">
+      </a>    
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      try{
+        const footer = document.querySelector('footer small');
+        if(footer) footer.innerHTML = '© ' + new Date().getFullYear() + ' Takai Ilustraciones. Todos los derechos reservados.';
+      }catch(e){}
+
+      const dropdown = document.querySelector('.dropdown');
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      toggle.addEventListener('click', ()=>{
+        dropdown.classList.toggle('open');
+      });
+
+      document.addEventListener('click', (e)=>{
+        if(!dropdown.contains(e.target)){
+          dropdown.classList.remove('open');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
