@@ -31,7 +31,7 @@ nav {display:flex;gap:12px;align-items:center;position:relative}
 
 .features {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px; text-align: center;}
 .features h4 {font-family: "Quintessential", serif; font-weight: 800; color: #5f7196;}
-.feature {background:white;padding:16px;border-radius:10px}
+/*.feature {background:white;padding:16px;border-radius:10px}*/
 .gallery {background:white; padding:16px;border-radius:10px; display: grid; align-content: center; justify-content: center; align-items: center; justify-items: center;}
 
 footer {margin-top:32px;padding:18px 0;color:#666;text-align:center}
