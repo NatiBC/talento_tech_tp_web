@@ -22,9 +22,8 @@ nav {display:flex;gap:12px;align-items:center;position:relative}
 .dropdown.open .dropdown-menu {display:block}
 
 /* Hero */
-.hero {font-family: "Quintessential", serif; font-weight: 800; color: #5f7196;display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center;margin-top:28px; color: #5f7196;}
+.hero {font-family: "Quintessential", serif; font-weight: 800; color: #5f7196;display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center;margin-top:28px}
 .hero h1 {font-size:2rem;margin-bottom:10px}
-.hero p {color:#555}
 .card {background:#5f719650;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(13,13,38,0.06);font-family: "Niconne", cursive;font-weight: 400;font-style: normal; font-size: x-large;color: #445373;}
 .card h3 {font-family: "Quintessential", serif; font-weight: 800; color: #5f7196;}
 
