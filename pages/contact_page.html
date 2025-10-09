@@ -39,11 +39,37 @@
     <section id="contact" style="margin-top:18px">
       <div class="card">
         <h3>COMMISSIONS solicitud</h3>
-        <form style="margin-top:10px;display:grid;gap:8px">
-          <input type="text" placeholder="Tu nombre" required style="padding:8px;border-radius:6px;border:1px solid #ddd">
-          <input type="email" placeholder="Correo" required style="padding:8px;border-radius:6px;border:1px solid #ddd">
-          <textarea placeholder="Descripción del trabajo" rows="4" style="padding:8px;border-radius:6px;border:1px solid #ddd"></textarea>
-          <button type="submit" class="button_primary" style="border:none;cursor:pointer">Enviar</button>
+        <form 
+          action="https://formspree.io/f/xanppnpb" 
+          method="POST" 
+          style="margin-top:10px;display:grid;gap:8px"
+        >
+          <input 
+            type="text" 
+            name="name" 
+            placeholder="Tu nombre" 
+            required 
+            style="padding:8px;border-radius:6px;border:1px solid #ddd"
+          >
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Correo" 
+            required 
+            style="padding:8px;border-radius:6px;border:1px solid #ddd"
+          >
+          <textarea 
+            name="message" 
+            placeholder="Descripción del trabajo" 
+            rows="4" 
+            required 
+            style="padding:8px;border-radius:6px;border:1px solid #ddd"
+          ></textarea>
+          <button 
+            type="submit" 
+            class="button_primary" 
+            style="border:none;cursor:pointer"
+          >Enviar</button>
         </form>
       </div>
     </section>
