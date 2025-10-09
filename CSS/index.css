@@ -2,39 +2,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
 
-* {box-sizing:border-box;margin:0;padding:0}
-body {font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.6;color:#333;background:#f7f7fb}
-.container {max-width:1000px;margin:0 auto;padding:20px}
+* {box-sizing:border-box;
+  margin:0;
+  padding:0}
 
-header {background:url("https://cdna.artstation.com/p/assets/images/images/025/778/786/large/carolina-cesario-2020-knightwitch.jpg?1586891554"); padding:16px 0;box-shadow:0 1px 6px rgba(20,20,50,0.06)}
-.takai {font-size: clamp(24px, 8vw, 60px); font-family: "Quintessential", serif; font-weight: 400; font-style: normal; color: #5f7196;}
-.brand {font-weight:700;font-size:1.2rem}
-nav {display:flex;gap:12px;align-items:center;position:relative;flex-wrap: wrap;}
-.nav-right {margin-left:auto;display:flex;gap:12px;align-items:center}
-.button_primary {background:#5f7196;color:white; padding: 8px;}
+body {font-family:"Quintessential", serif;
+  line-height:1.6;color:#333;
+  background:#f7f7fb}
+
+.container {max-width:1000px;
+  margin:0 auto;
+  padding:20px}
+
+header {background:url("https://cdna.artstation.com/p/assets/images/images/025/778/786/large/carolina-cesario-2020-knightwitch.jpg?1586891554"); 
+  padding:16px 0;
+  box-shadow:0 1px 6px rgba(20,20,50,0.06)}
+
+.takai {font-size: clamp(24px, 8vw, 60px);
+  font-weight: 400;
+  font-style: normal;
+  color: #5f7196;}
+
+.brand {font-weight:700;
+  font-size:1.2rem}
+
+/* Nav */
+nav {display:flex;
+  gap:12px;
+  align-items:center;
+  position:relative;
+  flex-wrap: wrap;}
+.nav-right {margin-left:auto;
+  display:flex;
+  gap:12px;
+  align-items:center}
+
+.button_primary {background:#5f7196;
+  color:white;
+  padding: 8px;}
 
 /* Dropdown / Hamburguesa */
 .dropdown {position:relative;}
-.dropdown-toggle {cursor:pointer;padding:8px 12px;border-radius:8px;background:#9aaaca;color:white;font-size:1.4rem;line-height:1;}
-.dropdown-menu {display:none;position:absolute;right:0;top:calc(100% + 6px);background:white;min-width:160px;border-radius:8px;box-shadow:0 6px 18px rgba(13,13,38,0.1);z-index:10}
-.dropdown-menu a {display:block;padding:10px 14px;color:#333;text-decoration:none}
+.dropdown-toggle {cursor:pointer;
+  padding:8px 12px;
+  border-radius:8px;
+  background:#9aaaca;
+  color:white;
+  font-size:25px;
+  line-height:1;}
+.dropdown-menu {display:none;
+  position:absolute;
+  right:0;
+  top:calc(100% + 6px);
+  background:white;
+  min-width:160px;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(13,13,38,0.1);
+  z-index:10}
+.dropdown-menu a {display:block;
+  padding:10px 14px;
+  color:#333;
+  text-decoration:none;
+  font-size: 18px;}
 .dropdown-menu a:hover {background:#f1f1f6}
 .dropdown.open .dropdown-menu {display:block}
 
 /* Hero */
-.hero {font-family: "Quintessential", serif; font-weight: 800; color: #5f7196;display:grid;text-align: center;align-items:center;margin-top:28px}
-.hero h1 {font-size:2rem;margin-bottom:10px}
-.card {background:#5f719650;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(13,13,38,0.06);font-family: "Niconne", cursive;font-weight: 400;font-style: normal; font-size: x-large;color: #445373;}
-.card h3 {font-family: "Quintessential", serif; font-weight: 800; color: #5f7196;}
+.hero {font-weight: 800;
+  color: #5f7196;
+  display:grid;text-align: center;
+  align-items:center;
+  margin-top:28px}
+.hero h1 {font-size:2rem;
+  margin-bottom:10px}
 
+/* Card */
+.card {background:#5f719650;
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(13,13,38,0.06);
+  font-family: "Niconne", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+  color: #445373;} 
+.card h3 {font-family: "Quintessential", serif;
+  font-weight: 800;
+  color: #5f7196;}
 
-.features {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px; text-align: center;}
-.features h4 {font-family: "Quintessential", serif; font-weight: 800; color: #5f7196;}
-.gallery {background:white; padding:16px;border-radius:10px; display: grid; align-content: center; justify-content: center; align-items: center; justify-items: center;}
+/* Features */
+.features {display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;margin-top:20px;
+  text-align: center;}
+.features h4 {font-weight: 800;
+  color: #5f7196;}
 
-footer {margin-top:32px;padding:18px 0;color:#666;text-align:center}
+.gallery {background:white;
+  padding:16px;
+  border-radius:10px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;}
 
-.thx {text-align: center; padding-top: 10px;}
+.atajo {background:white;
+  padding:16px;
+  border-radius:10px;
+  font-size: 30px;}
+
+footer {margin-top:32px;
+  padding:18px 0;
+  color:#666;
+  text-align:center;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;}
+
+.thx {text-align: center;
+  padding-top: 10px;}
+
+.social {padding:18px;
+  border-radius:12px;
+  font-family: "Niconne", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+  color: #445373;
+  text-align: center;}
 
 .modal {
   display: none;
@@ -49,7 +143,6 @@ footer {margin-top:32px;padding:18px 0;color:#666;text-align:center}
   z-index: 1000;
   cursor: pointer;
 }
-
 .modal-content {
   background-color: #fff;
   padding: 20px 30px;

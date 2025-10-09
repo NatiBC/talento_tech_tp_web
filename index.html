@@ -18,80 +18,84 @@
             <div class="dropdown-toggle">☰</div>
             <div class="dropdown-menu">
               <a href="#inicio">Inicio</a>
-              <a href="pages/info_page.html">Información Personal</a>
+              <a href="pages/info_page.html">Precios</a>
               <a href="pages/gallery_page.html">Galeria</a>
-              <a href="pages/contact_page.html">COMMISSIONS</a>
+              <a href="pages/contact_page.html">Contacto</a>
             </div>
           </div>
         </nav>
       </div>
     </header>
 
-    <main class="container">
-      
-      <section class="hero">
-        <div>
-          <h1>Ultimas Ilustraciones</h1>
-        </div>
-      </section>
-      
-      <section id="features" class="features">
-        <div class="gallery">
-          <h4>Vanguard</h4><br>
-          <img src="https://cdna.artstation.com/p/assets/images/images/025/778/786/large/carolina-cesario-2020-knightwitch.jpg?1586891554" alt="ilustración de bruja con gatos de viento" width="130px" height="180px">
-        </div>
-        
-        <div class="gallery">
-          <h4>Ochre, the deer girl</h4><br>
-          <img src="https://cdnb.artstation.com/p/assets/images/images/044/382/067/large/carolina-cesario-2021-ochre-finalv2-copy.jpg?1639836440" alt="ilustración de bruja con gatos de viento" width="200px" height="130px">
-        </div>
-        
-        <div class="gallery">
-          <h4>Star Witch</h4><br>
-          <img src="https://cdnb.artstation.com/p/assets/images/images/028/319/763/large/carolina-cesario-2020-starwitch-1.jpg?1594132649" alt="ilustración de bruja con gatos de viento" width="130px" height="180px">
-        </div>
-      </section>
-      
-      <section id="about" style="margin-top:20px">
-        <div class="card">
-          <h3>Redes sociales alternas</h3>
-          <p style="margin-top:8px">Puedes encontrar todas mis redes sociales haciendo clic en el siguiente icono.
-            <a href="https://linktr.ee/takaiart?fbclid=PAZXh0bgNhZW0CMTEAAacJqnladyUCD1JJzYK1yMUQOdNXPHyoNfoDXtG9DmD4tYWZpp0InkaV9zLMrg_aem_D8L1O1GoydKBXslQHu5Dzw" target="_blank">
-              <img src="media/img/linktree.png" alt="logo de linktree" width="30px" height="30px">
-            </a>
-          </p>
-        </div>
-      </section>    
-
-    </main>
-
-    <footer>
-      <div class="container">
-        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7HMz8o0m7ASQ3ImFPfhWTY?utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <small>© " + new Date().getFullYear() + " Takai Ilustraciones. Todos los derechos reservados.</small>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Información del artista</h1>
       </div>
-    </footer>
+    </section>
 
-    <script>
-      (function(){
-        try{
-          const footer = document.querySelector('footer small');
-          if(footer) footer.innerHTML = '© ' + new Date().getFullYear() + ' Takai Ilustraciones. Todos los derechos reservados.';
-        }catch(e){}
+    <section id="about" style="margin-top:20px">
+      <div class="card">
+        <p style="margin-top:8px">Hola, soy Takai (Carolina C.), ilustradora digital apasionada por transformar ideas en imágenes llenas de color, emoción y personalidad.
+            Me especializo en ilustración de personajes, arte conceptual, diseño editorial y más, trabajando con herramientas digitales que me permiten dar vida a cada detalle.
+            Mi objetivo es crear ilustraciones que no solo sean visualmente atractivas, sino que también conecten con las personas y cuenten una historia. A lo largo de mi experiencia, 
+            he participado en proyectos de libros, branding y videojuegos, siempre adaptando mi estilo a las necesidades de cada cliente.
+            Si buscás una ilustración única, creativa y hecha con dedicación, ¡me encantaría colaborar con vos!</p>
+      </div>
+    </section>
 
-        const dropdown = document.querySelector('.dropdown');
-        const toggle = dropdown.querySelector('.dropdown-toggle');
-        toggle.addEventListener('click', ()=>{
-          dropdown.classList.toggle('open');
-        });
+    <section class="features">
+      <div class="atajo">
+        <a href="pages/info_page.html">Precios</a>       
+      </div>
+        
+      <div class="atajo">
+        <a href="pages/gallery_page.html">Galeria</a>
+      </div>
+        
+      <div class="atajo">
+        <a href="pages/contact_page.html">Contacto</a>
+      </div>
+    </section>
 
-        document.addEventListener('click', (e)=>{
-          if(!dropdown.contains(e.target)){
-            dropdown.classList.remove('open');
-          }
-        });
-      })();
-    </script>
-  </body>
+    <section id="about" style="margin-top:20px">
+      <div class="social">
+        <p style="margin-top:8px">Puedes encontrar todas mis redes sociales haciendo clic en el siguiente icono.
+          <a href="https://linktr.ee/takaiart?fbclid=PAZXh0bgNhZW0CMTEAAacJqnladyUCD1JJzYK1yMUQOdNXPHyoNfoDXtG9DmD4tYWZpp0InkaV9zLMrg_aem_D8L1O1GoydKBXslQHu5Dzw" target="_blank">
+            <img src="media/img/linktree.png" alt="logo de linktree" width="30px" height="30px">
+          </a>
+        </p>
+      </div>
+    </section> 
+  </main>
+
+  <footer>
+    <div class="container">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7HMz8o0m7ASQ3ImFPfhWTY?utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <small>© " + new Date().getFullYear() + " Takai Ilustraciones. Todos los derechos reservados.</small>    
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      try{
+        const footer = document.querySelector('footer small');
+        if(footer) footer.innerHTML = '© ' + new Date().getFullYear() + ' Takai Ilustraciones. Todos los derechos reservados.';
+      }catch(e){}
+
+      const dropdown = document.querySelector('.dropdown');
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      toggle.addEventListener('click', ()=>{
+        dropdown.classList.toggle('open');
+      });
+
+      document.addEventListener('click', (e)=>{
+        if(!dropdown.contains(e.target)){
+          dropdown.classList.remove('open');
+        }
+      });
+    })();
+  </script>
+</body>
 
 </html>
