@@ -36,57 +36,51 @@
         </section>
 
         <section id="features" class="features">
+            <!-- POPUP DE IMAGEN -->
+            <div id="popup" class="popup">
+                <span class="close">&times;</span>
+                <img class="popup-img" id="popup-img" alt="Vista ampliada">
+            </div>
+
             <div class="gallery">
                 <h4>Vanguard</h4>
                 <div>
-                    <a href="https://cdna.artstation.com/p/assets/images/images/025/778/786/large/carolina-cesario-2020-knightwitch.jpg?1586891554" target="_blank">
-                        <img src="https://cdna.artstation.com/p/assets/images/images/025/778/786/large/carolina-cesario-2020-knightwitch.jpg?1586891554" alt="ilustración de bruja con gatos de viento" width="130px" height="180px">
-                    </a>
+                    <img src="../media/img/vanguard.jpg" alt="ilustración de bruja con gatos de viento" width="130px" height="180px">
                 </div>        
             </div>
         
             <div class="gallery">
                 <h4>Ochre, the deer girl</h4>
                 <div>
-                    <a href="https://cdnb.artstation.com/p/assets/images/images/044/382/067/large/carolina-cesario-2021-ochre-finalv2-copy.jpg?1639836440" target="_blank">
-                        <img src="https://cdnb.artstation.com/p/assets/images/images/044/382/067/large/carolina-cesario-2021-ochre-finalv2-copy.jpg?1639836440" alt="ilustración de bruja con gatos de viento" width="200px" height="130px">
-                    </a>
+                    <img src="../media/img/Ochre_the_deer_girl.jpg" alt="ilustración de bruja con gatos de viento" width="200px" height="130px">
                 </div>
             </div>
         
             <div class="gallery">
                 <h4>Star Witch</h4>
                 <div>
-                    <a href="https://cdnb.artstation.com/p/assets/images/images/028/319/763/large/carolina-cesario-2020-starwitch-1.jpg?1594132649" target="_blank">
-                        <img src="https://cdnb.artstation.com/p/assets/images/images/028/319/763/large/carolina-cesario-2020-starwitch-1.jpg?1594132649" alt="ilustración de bruja con gatos de viento" width="130px" height="180px">
-                    </a>
+                    <img src="../media/img/star_witch.jpg" alt="ilustración de bruja con gatos de viento" width="130px" height="180px">
                 </div>
             </div>
 
             <div class="gallery">
                 <h4>The Iron Flan V</h4>
                 <div>
-                    <a href="https://cdnb.artstation.com/p/assets/images/images/031/029/995/large/carolina-cesario-2020-ironflanv-1004.jpg?1602379064" target="_blank">
-                        <img src="https://cdnb.artstation.com/p/assets/images/images/031/029/995/large/carolina-cesario-2020-ironflanv-1004.jpg?1602379064" alt="ilustración de bruja con gatos de viento" width="200px" height="130px">
-                    </a>
+                    <img src="../media/img/the_iron_flan_v.jpg" alt="ilustración de bruja con gatos de viento" width="200px" height="130px">
                 </div>
             </div>
 
             <div class="gallery">
                 <h4>Dragon Age: Skyhold</h4>
                 <div>
-                    <a href="https://cdnb.artstation.com/p/assets/images/images/021/259/341/large/carolina-cesario-2019-dai-skyhold-1013.jpg?1571000374" target="_blank">
-                        <img src="https://cdnb.artstation.com/p/assets/images/images/021/259/341/large/carolina-cesario-2019-dai-skyhold-1013.jpg?1571000374" alt="ilustración de bruja con gatos de viento" width="200px" height="130px">
-                    </a>
+                    <img src="../media/img/dragon_age_skyhold.jpg" alt="ilustración de bruja con gatos de viento" width="200px" height="130px">
                 </div>
             </div>
 
             <div class="gallery">
                 <h4>Djinn</h4>
                 <div>
-                    <a href="https://cdnb.artstation.com/p/assets/images/images/026/351/955/large/carolina-cesario-2020-djinn-final.jpg?1588551168" target="_blank">
-                        <img src="https://cdnb.artstation.com/p/assets/images/images/026/351/955/large/carolina-cesario-2020-djinn-final.jpg?1588551168" alt="ilustración de bruja con gatos de viento" width="130px" height="180px">
-                    </a>
+                    <img src="../media/img/djinn.jpg" alt="ilustración de bruja con gatos de viento" width="130px" height="180px">
                 </div>
             </div>
         </section>
@@ -141,6 +135,34 @@
         });
         })();
     </script>
+    <script>
+        // Seleccionamos todos los <img> dentro de .gallery
+        const images = document.querySelectorAll('.gallery img');
+        const popup = document.getElementById('popup');
+        const popupImg = document.getElementById('popup-img');
+        const closeBtn = document.querySelector('.close');
+
+        // Abrir el popup con la imagen clickeada
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+            popup.style.display = 'flex';
+            popupImg.src = img.src; // mostramos la misma imagen
+            });
+        });
+
+        // Cerrar el popup al hacer clic en la X
+        closeBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        // Cerrar al hacer clic fuera de la imagen
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+            popup.style.display = 'none';
+            }
+        });
+    </script>
+
 </body>
 
 </html>
