@@ -73,8 +73,14 @@ nav {display:flex;
   display:grid;text-align: center;
   align-items:center;
   margin-top:28px}
-.hero h1 {font-size:2rem;
+.hero h1 {font-size: 40px;
   margin-bottom:10px}
+.hero img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;}
+.hero p {margin-top:8px;
+  font-size: 18px;}
 
 /* Card */
 .card {background:#5f719650;
@@ -115,6 +121,7 @@ nav {display:flex;
   width: 100%;
   height: 100%;
   object-fit: contain;} /* o "cover" según prefieras */
+
 
 .atajo {background:white;
   padding:16px;
