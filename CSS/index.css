@@ -98,6 +98,7 @@ nav {display:flex;
 .features h4 {font-weight: 800;
   color: #5f7196;}
 
+/* Gallery */
 .gallery {background:white;
   padding:16px;
   border-radius:10px;
@@ -106,6 +107,14 @@ nav {display:flex;
   justify-content: center;
   align-items: center;
   justify-items: center;}
+.gallery div {margin-top: 10px;
+  width: 200px;
+  height: 130px;
+  overflow: hidden;} /* oculta lo que sobresalga */
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;} /* o "cover" según prefieras */
 
 .atajo {background:white;
   padding:16px;
