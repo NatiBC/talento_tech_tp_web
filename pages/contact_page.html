@@ -43,38 +43,37 @@
           id="contact-form" 
           action="https://formspree.io/f/xanppnpb" 
           method="POST" 
-          style="margin-top:10px;display:grid;gap:8px"
-        >
+          style="margin-top:10px;display:grid;gap:8px">
+
           <input 
             type="text" 
             name="name" 
             placeholder="Tu nombre" 
             required 
-            style="padding:8px;border-radius:6px;border:1px solid #ddd"
-          >
+            style="padding:8px;border-radius:6px;border:1px solid #ddd">
+
           <input 
             type="email" 
             name="email" 
             placeholder="Correo" 
             required 
-            style="padding:8px;border-radius:6px;border:1px solid #ddd"
-          >
+            style="padding:8px;border-radius:6px;border:1px solid #ddd">
+
           <textarea 
             name="message" 
             placeholder="Descripción del trabajo" 
             rows="4" 
             required 
-            style="padding:8px;border-radius:6px;border:1px solid #ddd"
-          ></textarea>
+            style="padding:8px;border-radius:6px;border:1px solid #ddd">
+          </textarea>
+
           <button 
             type="submit" 
             class="button_primary" 
-            style="border:none;cursor:pointer"
-          >Enviar</button>
+            style="border:none;cursor:pointer">Enviar
+          </button>
         </form>
-<!--        <p id="form-response" class="thx">
-          ¡Gracias! Tu solicitud ha sido enviada.
-        </p>-->
+
       </div>
       <div id="success-modal" class="modal">
         <div class="modal-content">
@@ -86,20 +85,41 @@
   </main>
 
   <footer>
-    <div class="container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3707389259484!2d-58.402259223664664!3d-34.59478557295746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb152b360e055%3A0x25067e08dbe2a375!2sUniversidad%20Nacional%20de%20las%20Artes!5e0!3m2!1ses-419!2sar!4v1759448465013!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
-      <small>© " + new Date().getFullYear() + " Takai Ilustraciones. Todos los derechos reservados.</small>
-      <a href="https://linktr.ee/takaiart?fbclid=PAZXh0bgNhZW0CMTEAAacJqnladyUCD1JJzYK1yMUQOdNXPHyoNfoDXtG9DmD4tYWZpp0InkaV9zLMrg_aem_D8L1O1GoydKBXslQHu5Dzw" target="_blank">
-        <img src="../media/img/linktree.png" alt="logo de linktree" width="30px" height="30px">
-      </a>    
-    </div>
-  </footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Takai Ilustraciones</h4>
+            <p>Arte digital y encargos personalizados.</p>
+            <p>Todos los derechos reservados.</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="info_page.html">Precios</a></li>
+                <li><a href="gallery_page.html">Galería</a></li>
+                <li><a href="contact_page.html">Contacto</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Redes</h4>
+            <small>© " + new Date().getFullYear() + " Takai Ilustraciones.</small>
+            <a href="https://linktr.ee/takaiart" target="_blank">
+                <img src="../media/img/linktree.png" alt="logo de linktree" width="30" height="30">
+            </a>
+        </div>
+        <div class="footer-media">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3707389259484!2d-58.402259223664664!3d-34.59478557295746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb152b360e055%3A0x25067e08dbe2a375!2sUniversidad%20Nacional%20de%20las%20Artes!5e0!3m2!1ses-419!2sar!4v1759448465013!5m2!1ses-419!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+        </div>
+      </div>
+  </footer>  
 
   <script>
     (function(){
       try{
         const footer = document.querySelector('footer small');
-        if(footer) footer.innerHTML = '© ' + new Date().getFullYear() + ' Takai Ilustraciones. Todos los derechos reservados.';
+        if(footer) footer.innerHTML = '© ' + new Date().getFullYear() + ' Takai Ilustraciones.';
       }catch(e){}
 
       const dropdown = document.querySelector('.dropdown');
@@ -115,31 +135,6 @@
       });
     })();
   </script>
-
-<!--  <script>
-    const form = document.getElementById('contact-form');
-    const response = document.getElementById('form-response');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault(); // evita recargar la página
-
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(res => {
-        if (res.ok) {
-          response.style.display = 'block'; // muestra el mensaje
-          form.reset(); // limpia los campos
-        } else {
-          alert('Error al enviar. Intenta de nuevo.');
-        }
-      }).catch(err => {
-        alert('Error al enviar. Intenta de nuevo.');
-      });
-    });
-  </script>
--->
 
   <script>
     const form = document.getElementById('contact-form');

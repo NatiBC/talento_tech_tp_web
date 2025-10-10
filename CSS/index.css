@@ -147,11 +147,43 @@ nav {display:flex;
   border-radius:10px;
   font-size: 30px;}
 
-footer {margin-top:32px;
-  padding:18px 0;
-  color:#666;
-  text-align:center;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;}
+footer {
+  background-color: #445373;
+  color: white;
+  padding: 24px 0;}
+.footer-container {
+  display: flex;
+  justify-content: space-around; /* separa las 3 secciones */
+  align-items: flex-start;
+  flex-wrap: wrap; /* permite que bajen si no entra el contenido */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 20px;}
+.footer-section {
+  flex: 1;
+  min-width: 200px; /* evita que se achiquen demasiado */
+  text-align: center;}
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #daeaff80; /* color destacado opcional */}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;}
+.footer-section li {
+  margin-bottom: 6px;}
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;}
+.footer-section a:hover {
+  color: #fff;}
+.footer-media {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 
 .thx {text-align: center;
   padding-top: 10px;}
@@ -201,6 +233,16 @@ footer {margin-top:32px;
 }
 
 @media (max-width: 600px) {
-  .gallery {width: 100%; /* ocupa todo el ancho disponible */
+  .gallery {width: 100%;
     max-width: 320px;}
+}
+
+/* ✅ Media Query: disposición vertical en pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;     /* cambia de fila a columna */
+    align-items: center;
+    text-align: center;}
+  .footer-section {
+    margin-bottom: 20px;}
 }

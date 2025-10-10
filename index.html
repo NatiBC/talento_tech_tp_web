@@ -58,30 +58,44 @@
           Si buscás una ilustración única, creativa y hecha con dedicación, ¡me encantaría colaborar con vos!</p>
         </div>
       </section>
-      
-      <section id="about" style="margin-top:20px">
-        <div class="social">
-          <p style="margin-top:8px">Puedes encontrar todas mis redes sociales haciendo clic en el siguiente icono.
-            <a href="https://linktr.ee/takaiart?fbclid=PAZXh0bgNhZW0CMTEAAacJqnladyUCD1JJzYK1yMUQOdNXPHyoNfoDXtG9DmD4tYWZpp0InkaV9zLMrg_aem_D8L1O1GoydKBXslQHu5Dzw" target="_blank">
-              <img src="media/img/linktree.png" alt="logo de linktree" width="30px" height="30px">
-            </a>
-          </p>
-        </div>
-      </section> 
   </main>
 
   <footer>
-    <div class="container">
-      <small>© " + new Date().getFullYear() + " Takai Ilustraciones. Todos los derechos reservados.</small>    
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7HMz8o0m7ASQ3ImFPfhWTY?utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
+    <div class="footer-container">
+      <div class="footer-section">
+          <h4>Takai Ilustraciones</h4>
+          <p>Arte digital y encargos personalizados.</p>
+          <p>Todos los derechos reservados.</p>
+      </div>
+      
+      <div class="footer-section">
+          <h4>Enlaces</h4>
+          <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="pages/info_page.html">Precios</a></li>
+              <li><a href="pages/gallery_page.html">Galería</a></li>
+              <li><a href="pages/contact_page.html">Contacto</a></li>
+          </ul>
+      </div>
+      
+      <div class="footer-section">
+          <h4>Redes</h4>
+          <small>© " + new Date().getFullYear() + " Takai Ilustraciones.</small>
+          <a href="https://linktr.ee/takaiart" target="_blank">
+              <img src="../media/img/linktree.png" alt="logo de linktree" width="30" height="30">
+          </a>
+      </div>
+      <div class="footer-media">
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7HMz8o0m7ASQ3ImFPfhWTY?utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>            
+      </div>
+    </div>   
   </footer>
 
   <script>
     (function(){
       try{
         const footer = document.querySelector('footer small');
-        if(footer) footer.innerHTML = '© ' + new Date().getFullYear() + ' Takai Ilustraciones. Todos los derechos reservados.';
+        if(footer) footer.innerHTML = '© ' + new Date().getFullYear() + ' Takai Ilustraciones.';
       }catch(e){}
 
       const dropdown = document.querySelector('.dropdown');
