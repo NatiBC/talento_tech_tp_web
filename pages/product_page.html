@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Takai Ilustraciones - Productos</title>
+    <meta name="description" content="Página de inicio sencilla creada como ejemplo.">
+    <link rel="stylesheet" href="../CSS/index.css">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container" style="display:flex;align-items:center;gap:16px">
+        <div class="takai">Takai Ilustraciones</div>
+        <nav class="nav-right">
+          <div class="dropdown">
+            <div class="dropdown-toggle">☰</div>
+            <div class="dropdown-menu">
+              <a href="../index.html">Inicio</a>
+              <a href="product_page.html">Productos</a>
+              <a href="gallery_page.html">Galeria</a>
+              <a href="contact_page.html">Contacto</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">      
+        <section class="hero">
+          <div>
+            <h1>Tipos de Ilustraciones</h1>
+          </div>
+        </section>
+        
+        <section id="features" class="features">
+          <div class="gallery" data-description="PNG de 180x180px a 400x400px, ideal para foto de perfil con fondo a color">
+            <h4>Avatar CON fondo</h4>
+            <p>Precio: U$S 50.00</p>
+            <div>
+              <img src="../media/img/avatar_fondo.png" alt="ilustración de muestra para avatar con fondo" width="130px" height="180px">
+            </div>
+          </div>
+          
+          <div class="gallery" data-description="PNG de 180x180px a 400x400px, ideal para foto de perfil con fondo blanco.">
+            <h4>Avatar SIN fondo</h4>
+            <p>Precio: U$S 45.00</p>
+            <div>
+              <img src="../media/img/avatar_sin_fondo.png" alt="ilustración de muestra para avatar sin fondo" width="200px" height="130px">
+            </div>
+          </div>
+          
+          <div class="gallery" data-description="PNG de un personaje con un fondo definido.">
+            <h4>Cuerpo completo CON fondo</h4>
+            <p>Precio: U$S 150.00</p>          
+            <div>
+              <img src="../media/img/pj_fondo.jpg" alt="ilustración de muestra para personaje cuerpo completo con fondo" width="130px" height="180px">
+            </div>
+          </div>
+
+          <div class="gallery" data-description="PNG de un personaje con fondo blanco.">
+            <h4>Cuerpo completo SIN fondo</h4>
+            <p>Precio: U$S 100.00</p>          
+            <div>
+              <img src="../media/img/pj_sin_fondo.jpg" alt="ilustración de muestra para personaje cuerpo completo sin fondo" width="130px" height="180px">
+            </div>
+          </div>
+
+          <div class="gallery" data-description="PNG en blanco y negro con diferentes vistas y vestuarios de un personaje.">
+            <h4>Boceto de personaje</h4>
+            <p>Precio: U$S 120.00</p>
+            <div>
+              <img src="../media/img/boceto_pj.jpg" alt="ilustración de muestra para boceto de personaje" width="130px" height="180px">
+            </div>
+          </div>
+
+          <div class="gallery" data-description="PNG horizontal con uno o más personajes, ideal para fondos de pantalla.">
+            <h4>Wallpaper</h4>
+            <p>Precio: U$S 300.00</p>
+            <div>
+              <img src="../media/img/wallpaper.jpg" alt="ilustración de muestra para wallpaper" width="130px" height="180px">
+            </div>
+          </div>
+        </section>   
+    </main>
+
+    <footer>
+      <div class="footer-container">
+          <div class="footer-section">
+              <h4>Takai Ilustraciones</h4>
+              <p>Arte digital y encargos personalizados.</p>
+              <p>Todos los derechos reservados.</p>
+          </div>
+          
+          <div class="footer-section">
+              <h4>Enlaces</h4>
+              <ul>
+                  <li><a href="../index.html">Inicio</a></li>
+                  <li><a href="product_page.html">Productos</a></li>
+                  <li><a href="gallery_page.html">Galería</a></li>
+                  <li><a href="contact_page.html">Contacto</a></li>
+              </ul>
+          </div>
+          
+          <div class="footer-section">
+              <h4>Redes</h4>
+              <small>© " + new Date().getFullYear() + " Takai Ilustraciones.</small>
+              <a href="https://linktr.ee/takaiart" target="_blank">
+                  <img src="../media/img/linktree.png" alt="logo de linktree" width="30" height="30">
+              </a>
+          </div>
+      </div>
+    </footer>
+
+    <!-- POP-UP (solo texto descriptivo) -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <p id="popup-description"></p>
+      </div>
+    </div>
+
+      <script>
+        (function(){
+          try{
+            const footer = document.querySelector('footer small');
+            if(footer) footer.innerHTML = '© ' + new Date().getFullYear() + ' Takai Ilustraciones.';
+          }catch(e){}
+
+          const dropdown = document.querySelector('.dropdown');
+          const toggle = dropdown.querySelector('.dropdown-toggle');
+          toggle.addEventListener('click', ()=>{
+            dropdown.classList.toggle('open');
+          });
+
+          document.addEventListener('click', (e)=>{
+            if(!dropdown.contains(e.target)){
+              dropdown.classList.remove('open');
+            }
+          });
+          
+          // --- POPUP SOLO TEXTO ---
+          const galleries = document.querySelectorAll('.gallery');
+          const popup = document.getElementById('popup');
+          const popupDescription = document.getElementById('popup-description');
+          const closeBtn = document.querySelector('.popup .close');
+
+          galleries.forEach(gallery => {
+            gallery.addEventListener('click', () => {
+              const description = gallery.getAttribute('data-description');
+              popupDescription.textContent = description || "Sin descripción disponible.";
+              popup.style.display = 'block';
+            });
+          });
+
+          closeBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+          });
+
+          window.addEventListener('click', e => {
+            if (e.target === popup) {
+              popup.style.display = 'none';
+            }
+          });
+        })();
+      </script>
+  </body>
+
+</html>
