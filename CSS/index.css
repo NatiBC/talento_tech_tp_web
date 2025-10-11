@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&family=Petit+Formal+Script&family=Niconne&family=Amarante&family=Bad+Script&display=swap');
 
 * {box-sizing:border-box;
   margin:0;
   padding:0}
+
+html {scroll-behavior: smooth;}
 
 body {font-family:"Quintessential", serif;
   line-height:1.6;color:#333;
@@ -72,14 +70,23 @@ nav {display:flex;
   min-width:160px;
   border-radius:8px;
   box-shadow:0 6px 18px rgba(13,13,38,0.1);
-  z-index:10}
+  z-index:10;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  pointer-events: none;}
 .dropdown-menu a {display:block;
   padding:10px 14px;
   color:#333;
   text-decoration:none;
-  font-size: 18px;}
+  font-size: 18px;
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;
+  border-radius:8px;}
 .dropdown-menu a:hover {background:#f1f1f6}
-.dropdown.open .dropdown-menu {display:block}
+.dropdown.open .dropdown-menu {display:block;
+  opacity: 1;
+  pointer-events: all;}
 
 /* Hero */
 .hero {font-weight: 800;
@@ -153,10 +160,15 @@ nav {display:flex;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:14px;
   text-align: center;}
-.atajo div{background:white;
-  padding:16px;
-  border-radius:10px;
-  font-size: 30px;}
+.atajo div{background-color:#8392b2;
+  padding:10px;
+  border-radius:15px;
+  font-size: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* efecto suave */}
+.atajo a {color: #ffffffc4;
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;}
 
 /* Footer */
 footer {
@@ -185,7 +197,10 @@ footer {
   padding: 0;
   margin: 0;}
 .footer-section li {
-  margin-bottom: 6px;}
+  margin-bottom: 6px;
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;}
 .footer-section a {
   color: #ccc;
   text-decoration: none;}
@@ -267,10 +282,6 @@ footer {
   .nav-right > a {display: none;}
   .dropdown-toggle {font-size: 1.8rem;
     padding: 6px 10px;}
-}
-
-/* Estilos para pantallas hasta 768px */
-@media (max-width: 768px) {
   .footer-container {flex-direction: column;
     align-items: center;
     text-align: center;}
