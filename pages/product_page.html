@@ -120,50 +120,9 @@
       </div>
     </div>
 
-      <script>
-        (function(){
-          try{
-            const footer = document.querySelector('footer small');
-            if(footer) footer.innerHTML = '© ' + new Date().getFullYear() + ' Takai Ilustraciones.';
-          }catch(e){}
-
-          const dropdown = document.querySelector('.dropdown');
-          const toggle = dropdown.querySelector('.dropdown-toggle');
-          toggle.addEventListener('click', ()=>{
-            dropdown.classList.toggle('open');
-          });
-
-          document.addEventListener('click', (e)=>{
-            if(!dropdown.contains(e.target)){
-              dropdown.classList.remove('open');
-            }
-          });
-          
-          // --- POPUP SOLO TEXTO ---
-          const galleries = document.querySelectorAll('.gallery');
-          const popup = document.getElementById('popup');
-          const popupDescription = document.getElementById('popup-description');
-          const closeBtn = document.querySelector('.popup .close');
-
-          galleries.forEach(gallery => {
-            gallery.addEventListener('click', () => {
-              const description = gallery.getAttribute('data-description');
-              popupDescription.textContent = description || "Sin descripción disponible.";
-              popup.style.display = 'block';
-            });
-          });
-
-          closeBtn.addEventListener('click', () => {
-            popup.style.display = 'none';
-          });
-
-          window.addEventListener('click', e => {
-            if (e.target === popup) {
-              popup.style.display = 'none';
-            }
-          });
-        })();
-      </script>
+    <script src="../JS/dropdown.js" defer></script>
+    <script src="../JS/popup.js" defer></script>
+    <script src="../JS/footer.js" defer></script>
   </body>
 
 </html>

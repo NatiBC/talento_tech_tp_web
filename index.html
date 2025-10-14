@@ -88,27 +88,8 @@
         </div>
       </div>   
     </footer>
-
-    <script>
-      (function(){
-        try{
-          const footer = document.querySelector('footer small');
-          if(footer) footer.innerHTML = '© ' + new Date().getFullYear() + ' Takai Ilustraciones.';
-        }catch(e){}
-
-        const dropdown = document.querySelector('.dropdown');
-        const toggle = dropdown.querySelector('.dropdown-toggle');
-        toggle.addEventListener('click', ()=>{
-          dropdown.classList.toggle('open');
-        });
-
-        document.addEventListener('click', (e)=>{
-          if(!dropdown.contains(e.target)){
-            dropdown.classList.remove('open');
-          }
-        });
-      })();
-    </script>
+    <script src="../JS/dropdown.js" defer></script>
+    <script src="../JS/footer.js" defer></script>
   </body>
 
 </html>
