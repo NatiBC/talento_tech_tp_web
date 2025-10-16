@@ -3,6 +3,8 @@ const images = document.querySelectorAll('.gallery img');
 const popup = document.getElementById('popup');
 const popupImg = document.getElementById('popup-img');
 const closeBtn = document.querySelector('.popup .close');
+const galleries = document.querySelectorAll('.gallery');
+const popupDescription = document.getElementById('popup-description');
 
 images.forEach(img => {
     img.addEventListener('click', () => {
@@ -23,9 +25,6 @@ popup.addEventListener('click', (e) => {
 });
 
 // --- POPUP SOLO TEXTO ---
-const galleries = document.querySelectorAll('.gallery');
-const popupDescription = document.getElementById('popup-description');
-
 galleries.forEach(gallery => {
 gallery.addEventListener('click', () => {
     const description = gallery.getAttribute('data-description');

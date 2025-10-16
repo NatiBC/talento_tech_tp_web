@@ -1,6 +1,7 @@
 /* Contact Page*/
 const form = document.getElementById('contact-form');
 const modal = document.getElementById('success-modal');
+const textarea = document.getElementById('message');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault(); // evita recargar la página
@@ -22,11 +23,9 @@ form.addEventListener('submit', function(e) {
 });
 
 // cerrar modal al hacer clic en cualquier parte
-
 modal.addEventListener('click', () => {modal.style.display = 'none';});
 
 // Ajuste automáticamente del textarea
-const textarea = document.getElementById('message');
 textarea.addEventListener('input', () => {
     textarea.style.height = 'auto';
     textarea.style.height = textarea.scrollHeight + 'px';

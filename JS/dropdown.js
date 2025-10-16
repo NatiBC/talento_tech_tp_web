@@ -1,5 +1,6 @@
 const dropdown = document.querySelector('.dropdown');
 const toggle = dropdown.querySelector('.dropdown-toggle');
+
 toggle.addEventListener('click', ()=>{
     dropdown.classList.toggle('open');
 });
