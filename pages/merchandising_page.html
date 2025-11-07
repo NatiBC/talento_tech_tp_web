@@ -22,6 +22,7 @@
               <a href="merchandising_page.html">Merchandising</a>
               <a href="gallery_page.html">Galeria</a>
               <a href="contact_page.html">Contacto</a>
+              <a href="carrito_page.html">🛒 Carrito</a>
             </div>
           </div>
         </nav>
@@ -31,59 +32,14 @@
     <main class="container">      
         <section class="hero">
           <div>
-            <h1>Tipos de Ilustraciones</h1>
+            <h1>Merchandising</h1>
           </div>
         </section>
         
-        <section id="features" class="features">
-          <div class="gallery" data-description="PNG de 180x180px a 400x400px, ideal para foto de perfil con fondo a color">
-            <h4>Pin</h4>
-            <p>10x10: U$S 50.00</p>
-            <div>
-              <img src="../media/img/pins.jpg" alt="ilustración de muestra para pin" width="130px" height="180px">
-            </div>
-          </div>
-          
-          <div class="gallery" data-description="PNG de 180x180px a 400x400px, ideal para foto de perfil con fondo blanco.">
-            <h4>Avatar SIN fondo</h4>
-            <p>Precio: U$S 45.00</p>
-            <div>
-              <img src="../media/img/avatar_sin_fondo.png" alt="ilustración de muestra para avatar sin fondo" width="200px" height="130px">
-            </div>
-          </div>
-          
-          <div class="gallery" data-description="PNG de un personaje con un fondo definido.">
-            <h4>Cuerpo completo CON fondo</h4>
-            <p>Precio: U$S 150.00</p>          
-            <div>
-              <img src="../media/img/pj_fondo.jpg" alt="ilustración de muestra para personaje cuerpo completo con fondo" width="130px" height="180px">
-            </div>
-          </div>
-
-          <div class="gallery" data-description="PNG de un personaje con fondo blanco.">
-            <h4>Cuerpo completo SIN fondo</h4>
-            <p>Precio: U$S 100.00</p>          
-            <div>
-              <img src="../media/img/pj_sin_fondo.jpg" alt="ilustración de muestra para personaje cuerpo completo sin fondo" width="130px" height="180px">
-            </div>
-          </div>
-
-          <div class="gallery" data-description="PNG en blanco y negro con diferentes vistas y vestuarios de un personaje.">
-            <h4>Boceto de personaje</h4>
-            <p>Precio: U$S 120.00</p>
-            <div>
-              <img src="../media/img/boceto_pj.jpg" alt="ilustración de muestra para boceto de personaje" width="130px" height="180px">
-            </div>
-          </div>
-
-          <div class="gallery" data-description="PNG horizontal con uno o más personajes, ideal para fondos de pantalla.">
-            <h4>Wallpaper</h4>
-            <p>Precio: U$S 300.00</p>
-            <div>
-              <img src="../media/img/wallpaper.jpg" alt="ilustración de muestra para wallpaper" width="130px" height="180px">
-            </div>
-          </div>
-        </section>   
+      <section class="merch">
+        <div id="productos"></div>
+      </section>
+  
     </main>
 
     <footer>
@@ -114,17 +70,21 @@
       </div>
     </footer>
 
-    <!-- POP-UP (solo texto descriptivo) -->
-    <div id="popup" class="popup">
+    <div id="popupCarrito" class="popup">
       <div class="popup-content">
-        <span class="close">&times;</span>
-        <p id="popup-description"></p>
+        <span class="close" id="cerrarPopupCarrito">&times;</span>
+        <p>Producto agregado al carrito</p>
       </div>
     </div>
 
+
+    <script src="../JS/merchandising.js" defer></script>
     <script src="../JS/dropdown.js" defer></script>
-    <script src="../JS/popup.js" defer></script>
     <script src="../JS/footer.js" defer></script>
+    <script src="../JS/data_productos.js" defer></script>
+    <script src="../JS/popupCarrito.js" defer></script>
   </body>
 
 </html>
+
+

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Takai Ilustraciones</title>
+    <meta name="description" content="Página de inicio sencilla creada como ejemplo.">
+    <link rel="stylesheet" href="../CSS/index.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="container" style="display:flex;align-items:center;gap:16px">
+        <div class="takai">Takai Ilustraciones</div>
+        <nav class="nav-right">
+          <div class="dropdown">
+            <div class="dropdown-toggle">☰</div>
+            <div class="dropdown-menu">
+                <a href="../index.html">Inicio</a>
+                <a href="product_page.html">Productos</a>
+                <a href="merchandising_page.html">Merchandising</a>
+                <a href="gallery_page.html">Galeria</a>
+                <a href="contact_page.html">Contacto</a>
+                <a href="carrito_page.html">🛒 Carrito</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+          <div>
+              <h1>Carrito</h1>
+          </div>
+          <h2 id="total"></h2>  
+        </section>
+        <section class="merch">
+          <div id="carrito"></div>
+        </section>
+    </main>
+
+  
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+            <h4>Takai Ilustraciones</h4>
+            <p>Arte digital y encargos personalizados.<br>Todos los derechos reservados.</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="product_page.html">Productos</a></li>
+                <li><a href="merchandising_page.html">Merchandising</a></li> 
+                <li><a href="gallery_page.html">Galería</a></li>
+                <li><a href="contact_page.html">Contacto</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Redes</h4>
+            <small></small>
+            <a href="https://linktr.ee/takaiart" target="_blank">
+                <img src="media/img/linktree.png" alt="logo de linktree" width="30" height="30">
+            </a>
+        </div>
+        <div class="footer-media">
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7HMz8o0m7ASQ3ImFPfhWTY?utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>            
+        </div>
+      </div>   
+    </footer>
+    
+    <script src="../JS/dropdown.js" defer></script>
+    <script src="../JS/footer.js" defer></script>
+    <script src="../JS/carrito.js"></script>
+  </body>
+
+</html>
