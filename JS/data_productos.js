@@ -1,20 +1,38 @@
 const productosData = [
   {
     id: 1,
-    title: "Pin Takai",
-    price: 3500,
-    image: "../media/img/pins.jpg"
+    title: "Pin Arte Digital",
+    price: 1500,
+    image: "../media/img/merch/pins.jpg"
   },
   {
     id: 2,
-    title: "Sticker",
-    price: 400,
-    image: "../media/img/stickers.jpg"
+    title: "Sticker Arte Digital",
+    price: 1000,
+    image: "../media/img/merch/stickers.jpg"
   },
   {
     id: 3,
     title: "Remera Arte Digital",
-    price: 8000,
-    image: "../media/img/remera.jpg"
-  }
+    price: 25000,
+    image: "../media/img/merch/remera.jpg"
+  },
+  {
+    id: 4,
+    title: "Gorra Arte Digital",
+    price: 1500,
+    image: "../media/img/merch/gorra.jpg"
+  },
+  {
+    id: 5,
+    title: "Poster Tela",
+    price: 15000,
+    image: "../media/img/merch/poster_tela.jpg"
+  },
+    {
+    id: 6,
+    title: "Poster Laminado",
+    price: 9000,
+    image: "../media/img/merch/poster_laminado.jpg"
+  },
 ];

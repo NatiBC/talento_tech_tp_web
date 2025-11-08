@@ -310,6 +310,41 @@ footer {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255,255,255,0.3);}
 
+/* POPUP centrado (mejorado) */
+#popupCarrito {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(3px);
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+#popupCarrito .popup-content {
+  background: #fff;
+  padding: 20px 26px;
+  border-radius: 14px;
+  text-align: center;
+  font-family: "Amarante", serif;
+  color: #5f7196;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+}
+
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
 /* Close */
 .close {position: absolute;
   top: 8px;
@@ -372,14 +407,6 @@ footer {
   margin-top: 30px;
 }
 
-/* Contenedor en grid para los productos del carrito */
-#carrito {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  margin-top: 30px;
-}
-
 /* Estilo de cada tarjeta de producto en el carrito */
 .carrito {
   background: #ffffff;
@@ -412,6 +439,27 @@ footer {
   font-size: 18px;
 }
 
+.cantidad-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.cant-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.cant-btn:hover {
+  background: #ccc;
+}
 
 
 
