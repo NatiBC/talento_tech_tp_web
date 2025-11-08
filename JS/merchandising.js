@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <button class="button_primary" onclick="agregarAlCarrito('${producto.id}', '${producto.title}', ${producto.price}, '${producto.image}')">
-          Agregar al carrito 🛒
+          Agregar al carrito
         </button>
       </div>
     `;

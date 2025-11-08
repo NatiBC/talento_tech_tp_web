@@ -389,8 +389,8 @@ footer {
 /* Carrito */
 .carrito {
   background: white;
-  border-radius: 10px;
-  padding: 16px;
+  border-radius: 12px;
+  padding: 18px;
   width: 220px;
   display: flex;
   flex-direction: column;
@@ -398,7 +398,9 @@ footer {
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
+  gap: 12px;  /* Ahora los elementos dentro tienen espacio */
 }
+
 /* Contenedor del carrito */
 #carrito {
   display: grid;
@@ -407,18 +409,6 @@ footer {
   margin-top: 30px;
 }
 
-/* Estilo de cada tarjeta de producto en el carrito */
-.carrito {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 18px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;  /* Ahora los elementos dentro tienen espacio */
-}
 
 /* Ajuste a la imagen para que quede prolija */
 .carrito img {
@@ -428,7 +418,7 @@ footer {
 
 /* Botones + cantidad más bonitos */
 .carrito button {
-  padding: 6px 12px;
+  padding: 10px 12px;
   border-radius: 8px;
   cursor: pointer;
   border: none;

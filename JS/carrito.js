@@ -27,15 +27,15 @@ function renderCarrito() {
 }
 
 function cambiarCantidad(index, cambio) {
-  carrito[index].cantidad += cambio;
+  // Solo permite restar si la cantidad es mayor a 1
+  if (cambio === -1 && carrito[index].cantidad <= 1) return;
 
-  if (carrito[index].cantidad <= 0) {
-    carrito.splice(index, 1);
-  }
+  carrito[index].cantidad += cambio;
 
   localStorage.setItem("carrito", JSON.stringify(carrito));
   renderCarrito();
 }
+
 
 function eliminar(index) {
   carrito.splice(index, 1);

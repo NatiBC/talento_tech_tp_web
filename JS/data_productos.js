@@ -29,10 +29,16 @@ const productosData = [
     price: 15000,
     image: "../media/img/merch/poster_tela.jpg"
   },
-    {
+  {
     id: 6,
     title: "Poster Laminado",
     price: 9000,
     image: "../media/img/merch/poster_laminado.jpg"
+  },
+  {
+    id: 7,
+    title: "Buzo Arte Digital",
+    price: 80000,
+    image: "../media/img/merch/buzo.jpg"
   },
 ];
