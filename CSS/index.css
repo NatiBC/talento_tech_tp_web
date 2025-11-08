@@ -53,36 +53,28 @@ nav {display:flex;
   align-items:center}
 
 /* Formulario adaptable */
-#contact-form {
-  display: flex;
+#contact-form {display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: stretch;
-  margin-top: 10px;
-}
+  margin-top: 10px;}
 
 #contact-form input,
-#contact-form textarea {
-  padding: 8px;
+#contact-form textarea {padding: 8px;
   border-radius: 6px;
   border: 1px solid #ddd;
   font-size: 1rem;
   font-family: "Amarante", serif;
-  color: #445373;
-}
+  color: #445373;}
 
-#contact-form textarea {
-  resize: vertical; /* permite redimensionar solo hacia abajo */
+#contact-form textarea {resize: vertical; /* permite redimensionar solo hacia abajo */
   min-height: 100px;
-  overflow-y: hidden; /* evita barras de desplazamiento mientras crece */
-}
+  overflow-y: hidden; /* evita barras de desplazamiento mientras crece */}
 
 #contact-form input:focus,
-#contact-form textarea:focus {
-  outline: none;
+#contact-form textarea:focus {outline: none;
   border-color: #5f7196;
-  box-shadow: 0 0 4px #5f719640;
-}
+  box-shadow: 0 0 4px #5f719640;}
 
 /* Button */
 .button_primary {background: #5f7196;
@@ -94,8 +86,7 @@ nav {display:flex;
   font-size: 1rem;
   font-family: "Amarante", serif;
   transition: background 0.2s ease;}
-.button_primary:hover {
-  background: #4c5c7b;}
+.button_primary:hover {background: #4c5c7b;}
 
 /* Dropdown / Hamburguesa */
 .dropdown {position:relative;}
@@ -140,8 +131,7 @@ nav {display:flex;
   margin-top:28px}
 .hero h1 {font-size: 40px;
   margin-bottom:10px}
-.hero img {
-  width: 50%;
+.hero img {width: 50%;
   height: 50%;
   object-fit: contain;}
 .hero p {margin-top:8px;
@@ -215,12 +205,10 @@ nav {display:flex;
   font-style: normal;}
 
 /* Footer */
-footer {
-  background-color: #445373;
+footer {background-color: #445373;
   color: white;
   padding: 24px 0;}
-.footer-container {
-  display: flex;
+.footer-container {display: flex;
   justify-content: space-around; /* separa las 3 secciones */
   align-items: flex-start;
   flex-wrap: wrap; /* permite que bajen si no entra el contenido */
@@ -228,36 +216,28 @@ footer {
   margin: 0 auto;
   padding: 0 20px;
   gap: 20px;}
-.footer-section {
-  flex: 1;
+.footer-section {flex: 1;
   min-width: 200px; /* evita que se achiquen demasiado */
   text-align: center;}
-.footer-section h4 {
-  margin-bottom: 10px;
+.footer-section h4 {margin-bottom: 10px;
   font-size: 1.1rem;
   color: #daeaff80; /* color destacado opcional */}
-.footer-section ul {
-  list-style: none;
+.footer-section ul {list-style: none;
   padding: 0;
   margin: 0;}
-.footer-section li {
-  margin-bottom: 6px;
+.footer-section li {margin-bottom: 6px;
   font-family: "Amarante", serif;
   font-weight: 400;
   font-style: normal;}
-.footer-section a {
-  color: #ccc;
+.footer-section a {color: #ccc;
   text-decoration: none;}
-.footer-section a:hover {
-  color: #fff;}
-.footer-media {
-  width: 100%;
+.footer-section a:hover {color: #fff;}
+.footer-media {width: 100%;
   padding: 0;
   margin: 0;}
 
 /* Modal */
-.modal {
-  display: none;
+.modal {display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -268,8 +248,7 @@ footer {
   align-items: center;
   z-index: 1000;
   cursor: pointer;}
-.modal-content {
-  background-color: #fff;
+.modal-content {background-color: #fff;
   padding: 20px 30px;
   border-radius: 10px;
   text-align: center;
@@ -278,8 +257,7 @@ footer {
   color: #5f7196;}
 
 /* PopUP */
-.popup {
-  display: none;
+.popup {display: none;
   position: fixed;
   z-index: 2000;
   top: 0;
@@ -304,46 +282,54 @@ footer {
   font-weight: 400;
   font-style: normal;
   color: #5f7196;}
-.popup-img {
-  max-width: 80%;
+.popup-img {max-width: 80%;
   max-height: 80%;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255,255,255,0.3);}
-
 /* POPUP centrado (mejorado) */
-#popupCarrito {
-  display: none;
+#popupCarrito {display: none;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.35);
   backdrop-filter: blur(3px);
   justify-content: center;
   align-items: center;
-  z-index: 3000;
-}
-
-#popupCarrito .popup-content {
-  background: #fff;
+  z-index: 3000;}
+#popupCarrito .popup-content {background: #fff;
   padding: 20px 26px;
   border-radius: 14px;
   text-align: center;
   font-family: "Amarante", serif;
   color: #5f7196;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.22);}
+#popup_carrito {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #7c90b9ff; /* verde por defecto */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  display: none; /* oculto por defecto */
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  font-size: 1rem;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+}
+/* Clase para mostrar el popup */
+#popup_carrito.mostrar {
+  display: block;
+  opacity: 1;
 }
 
 
-/* Animaciones suaves */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes scaleIn {
-  from { transform: scale(0.85); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
+@keyframes fadeIn {from { opacity: 0; }
+  to { opacity: 1; }}
+@keyframes scaleIn {from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }}
 
 /* Close */
 .close {position: absolute;
@@ -355,40 +341,31 @@ footer {
   transition: 0.3s;}
 .close:hover {color: #000;}
 
-#productos {
-  display: grid;
+#productos {display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
-  margin-top: 40px;
-}
+  margin-top: 40px;}
 
-#productos .gallery {
-  background: #fff;
+#productos .gallery {background: #fff;
   padding: 16px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   text-align: center;
-  transition: transform .2s, box-shadow .2s;
-}
+  transition: transform .2s, box-shadow .2s;}
 
-#productos .gallery:hover {
-  transform: scale(1.04);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
+#productos .gallery:hover {transform: scale(1.04);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);}
 
-#productos img {
-  width: 150px;
+#productos img {width: 150px;
   height: 150px;
-  object-fit: contain;
-}
+  object-fit: contain;}
 
 .merch h3 {font-weight: 800;
   color: #5f7196;
   font-size: 17px;}
 
 /* Carrito */
-.carrito {
-  background: white;
+.carrito {background: white;
   border-radius: 12px;
   padding: 18px;
   width: 220px;
@@ -398,59 +375,38 @@ footer {
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
-  gap: 12px;  /* Ahora los elementos dentro tienen espacio */
-}
-
+  gap: 12px;  /* Ahora los elementos dentro tienen espacio */}
 /* Contenedor del carrito */
-#carrito {
-  display: grid;
+#carrito {display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
-  margin-top: 30px;
-}
-
-
+  margin-top: 30px;}
 /* Ajuste a la imagen para que quede prolija */
-.carrito img {
-  max-width: 140px;
-  border-radius: 8px;
-}
-
+.carrito img {max-width: 140px;
+  border-radius: 8px;}
 /* Botones + cantidad más bonitos */
-.carrito button {
-  padding: 10px 12px;
+.carrito button {padding: 10px 12px;
   border-radius: 8px;
   cursor: pointer;
-  border: none;
-}
-
-.carrito span {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.cantidad-container {
-  display: flex;
+  border: none;}
+.carrito span {font-weight: bold;
+  font-size: 18px;}
+.cantidad-container {display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 10px 0;
-}
+  margin: 10px 0;}
+  
 
-.cant-btn {
-  padding: 6px 12px;
+.cant-btn {padding: 6px 12px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   background: #eee;
   font-size: 18px;
-  transition: 0.2s;
-}
+  transition: 0.2s;}
 
-.cant-btn:hover {
-  background: #ccc;
-}
-
+.cant-btn:hover {background: #ccc;}
 
 
 /* Estilos para pantallas hasta 820px */
@@ -462,19 +418,16 @@ footer {
   .footer-container {flex-direction: column;
     align-items: center;
     text-align: center;}
-  .footer-section {margin-bottom: 20px;}
-}
+  .footer-section {margin-bottom: 20px;}}
 
 /* Estilos para pantallas hasta 600px */
 @media (max-width: 600px) {
   .gallery {width: 100%;
-    max-width: 320px;}
-}
+    max-width: 320px;}}
 
 /* Estilos para pantallas hasta 480px */
 @media (max-width: 480px) {
   .container {padding: 10px;}
   .hero h1 {font-size: 1.5rem;}
   .button_primary {padding: 6px 12px;
-    font-size: 1rem;}
-}
+    font-size: 1rem;}}
