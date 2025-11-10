@@ -87,6 +87,9 @@ nav {display:flex;
   font-family: "Amarante", serif;
   transition: background 0.2s ease;}
 .button_primary:hover {background: #4c5c7b;}
+.button_sec {display: grid;
+  padding-top: 35px;
+  padding-bottom: 15px;}
 
 /* Dropdown / Hamburguesa */
 .dropdown {position:relative;}
