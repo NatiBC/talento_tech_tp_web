@@ -16,6 +16,12 @@ header {background: url("../media/img/header.png") center/cover no-repeat;
   position: sticky;
   top: 0;
   z-index: 1000;}
+
+.error {color: #445373;
+  background: #4c5c7b54;
+  padding:10px;
+  border-radius:8px;
+  display:none;}
     
 .container {max-width:1000px;
   margin:0 auto;

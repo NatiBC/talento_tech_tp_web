@@ -43,29 +43,30 @@
           <h3>COMMISSIONS solicitud</h3>
           <form id="contact-form" action="https://formspree.io/f/xanppnpb" method="POST" style="margin-top:10px;display:grid;gap:8px">
 
+            <!-- Caja donde se mostrarán los mensajes de validación -->
+            <div id="validation-messages" class="error"></div>
+
             <input 
               type="text" 
+              id="name"
               name="name" 
-              placeholder="Tu nombre" 
-              required>
+              placeholder="Nombre y Apellido">
 
             <input 
               type="email" 
+              id="email"
               name="email" 
-              placeholder="Correo" 
-              required>
+              placeholder="E-mail">
 
             <textarea 
+              id="message"
               name="message" 
               placeholder="Descripción del trabajo" 
-              rows="4" 
-              required></textarea>
+              rows="4"></textarea>
 
-            <button 
-              type="submit" 
-              class="button_primary" >Enviar
-            </button>
+            <button type="submit" class="button_primary">Enviar</button>
           </form>
+
 
         </div>
         <div id="success-modal" class="modal">
@@ -114,6 +115,7 @@
       <script src="../JS/contact.js" defer></script>
       <script src="../JS/footer.js" defer></script>
       <script src="../JS/contadorCarrito.js"></script>
+
   </body>
 
 </html>
