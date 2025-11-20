@@ -41,4 +41,10 @@ const productosData = [
     price: 80000,
     image: "../media/img/merch/buzo.jpg"
   },
+  {
+    id: 8,
+    title: "Calendario Ilustrado",
+    price: 10000,
+    image: "../media/img/merch/calendario.png"
+  }
 ];
