@@ -22,15 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const div = document.createElement("div");
     div.className = "carrito";
+
     div.innerHTML = `
-      <img src="${producto.image}" alt="${producto.title}">
+      <img src="${producto.image}" 
+           alt="${producto.title}" 
+           class="imagen-producto"
+           onclick="abrirImagen('${producto.image}')">
+
       <h3>${producto.title}</h3>
       <p>$${producto.price}</p>
+
       <div class="cantidad-container">
         <button class="restar">➖</button>
         <span id="cant-${producto.id}">1</span>
         <button class="sumar">➕</button>
       </div>
+
       <button class="button_primary agregar">Agregar al carrito</button>
     `;
 
@@ -79,4 +86,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
-
