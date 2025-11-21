@@ -409,7 +409,8 @@ footer {background-color: #445373;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
-  gap: 12px;  /* Ahora los elementos dentro tienen espacio */}
+  gap: 12px;
+  justify-content: space-evenly;  /* Ahora los elementos dentro tienen espacio */}
 /* Contenedor del carrito */
 #carrito {display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
