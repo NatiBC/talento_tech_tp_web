@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
            onclick="abrirImagen('${producto.image}')">
 
       <h3>${producto.title}</h3>
+      <h4>${producto.description}</h4>
       <p>$${producto.price}</p>
 
       <div class="cantidad-container">
@@ -54,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     div.querySelector(".agregar").addEventListener("click", () => {
-      agregarAlCarrito(producto.id, producto.title, producto.price, producto.image);
+      agregarAlCarrito(producto.id, producto.title, producto.description, producto.price, producto.image);
 
       if (typeof actualizarCantidadCarrito === "function") {
         actualizarCantidadCarrito();
@@ -69,14 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cantidades[id] < 1) cantidades[id] = 1;
   }
 
-  function agregarAlCarrito(id, title, price, image) {
+  function agregarAlCarrito(id, title, description, price, image) {
     const cantidad = cantidades[id] || 1;
 
     const existente = carrito.find(p => p.id === id);
     if (existente) {
       existente.cantidad += cantidad;
     } else {
-      carrito.push({ id, title, price, image, cantidad });
+      carrito.push({ id, title, price, description, image, cantidad });
     }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));

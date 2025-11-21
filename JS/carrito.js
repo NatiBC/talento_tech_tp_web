@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       div.innerHTML = `
         <img src="${producto.image}" width="100">
         <h3>${producto.title}</h3>
+        <h4>${producto.description}</h4>
         <p>Precio: $${producto.price * producto.cantidad}</p>
         <div style="display:flex; justify-content:center; align-items:center; gap:10px;">
           <button class="restar">➖</button>
