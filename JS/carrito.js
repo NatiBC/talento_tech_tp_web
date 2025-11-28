@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalTexto = document.getElementById("total");
   const spanCarrito = document.getElementById("carrito-cantidad");
   const popup = document.getElementById("popup_carrito");
+  document.getElementById("eliminar-todo")
+  ?.addEventListener("click", eliminarCarrito);
+
 
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -87,6 +90,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mostrarPopup(`"${nombreProducto}" eliminado del carrito`, "error");
   }
+
+  // Eliminar carrito
+function eliminarCarrito() {
+  const modal = document.getElementById("confirm-modal");
+  modal.classList.remove("hidden");
+
+  document.getElementById("confirm-si").onclick = () => {
+    carrito = [];
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    renderCarrito();
+    modal.classList.add("hidden");
+    mostrarPopup("Carrito eliminado", "error");
+  };
+
+  document.getElementById("confirm-no").onclick = () => {
+    modal.classList.add("hidden");
+    mostrarPopup("Cancelado", "success");
+  };
+}
+
 
   // Actualizar total de la compra
   function actualizarTotal() {

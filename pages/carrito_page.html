@@ -40,9 +40,17 @@
         </section>
         <section class="button_sec">
           <button class="button_primary">Finalizar Compra</button>
-          <button class="button_primary">Borrar Carrito</button>
+          <button id="eliminar-todo" class="button_primary">Borrar Carrito</button>
         </section>
         <div id="popup_carrito"></div>
+        <div id="confirm-modal" class="hidden">
+          <div class="contenido">
+            <p>¿Eliminar todo el carrito?</p>
+            <button id="confirm-si" class="button_delete">Sí</button>
+            <button id="confirm-no" class="button_delete">No</button>
+          </div>
+        </div>
+
     </main>
 
     <footer>
